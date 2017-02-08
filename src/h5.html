@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <meta name="apple-mobile-web-app-title" content="HTML5 Tag">
+  <meta name="apple-mobile-web-app-capable" content="yes"> <!-- 启用 WebApp 全屏模式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  
+  <title>HTML5 Tag</title>
+
+  <style>
+    body {
+      min-height: 2000px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <input id="fileInput" type="file" name="file" multiple accept="image/*" />
+  </form>
+
+  <div class="fileList">
+    
+  </div>
+
+  <hr>
+
+  mailto:<a href="mailto:test@yahoo.com?subject=test&cc=test2@yahoo.com&bcc=secu@yahoo.com&body=we love you">test@yahoo.com</a>
+
+  <hr>
+
+  tel<a href="tel:12312341234">123 1234 1234</a>
+  sms<a href="sms:12312341234">123 1234 1234</a>
+
+  <script>
+    function onloadCB() {
+      var fileInputElement = document.getElementById('fileInput');
+      fileInputElement.addEventListener('change', handleFiles, false);
+    }
+
+    function handleFiles() {
+      var fileList = this.files;
+      var fileListLength = fileList.length;
+
+      for (var i = 0; i < fileListLength; i++) {
+        var fileItem = fileList[i];
+        console.log(fileItem.name);
+        console.log(fileItem.size);
+        console.log(fileItem.type);
+      }
+    }
+
+    window.onload = onloadCB();
+
+  </script>
+
+</body>
+</html>
