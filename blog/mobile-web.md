@@ -101,6 +101,7 @@ CSS
   选择器 id
 
 JavaScript
+  基于原型的语言。prototype
   内置对象
   for...in 和 for...of
   for in 遍历下标，for of遍历值
